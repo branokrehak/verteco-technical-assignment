@@ -53,10 +53,12 @@ export default function LeadCard({ data, isOverlay = false }: LeadCardProps) {
                     <Text size="xs">Last Update: <b>{formattedDate}</b></Text>
                 </Stack>
             </Flex>
-            <Flex gap={4} mt={6} align="center">
-                <Text size="xs">Tags:</Text>
-                <Group gap={2}>{data.tags.map((tag, index) => <Badge key={index} size="xs" color="gray">{tag}</Badge>)}</Group>
-            </Flex>
+            {data.tags[0] && (
+                <Flex gap={4} mt={6} align="center">
+                    <Text size="xs">Tags:</Text>
+                    <Group gap={2}>{data.tags.map((tag, index) => <Badge key={index} size="xs" color="gray">{tag}</Badge>)}</Group>
+                </Flex>
+            )}
         </Card>
     </>;
 }
