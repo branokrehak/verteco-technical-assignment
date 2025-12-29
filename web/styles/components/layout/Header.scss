@@ -1,0 +1,18 @@
+header {
+  .header--logo {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  a {
+    color: var(--mantine-color-text);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 16px;
+  }
+}
