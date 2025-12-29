@@ -77,8 +77,6 @@ export const getLead = async (slug: string): Promise<GetLeadResponse> => {
 export const createLead = async (data: LeadCreationAttributes): Promise<{ slug: string }> => {
     const { email, name, company, value, tags, notes } = data;
 
-    if (!tags[0]) throw new Error();
-
     const uniqueSlug = await makeUniqueSlug(Lead, data.name);
 
     // Change empty string email to null
